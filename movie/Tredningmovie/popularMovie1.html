@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="stangemovie.css" />
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js"></script>
+    <title>Train to Busan</title>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <div class="logo">
+          <h1>SVG</h1>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="../../homepage/homepage.html"
+                ><i class="ri-home-4-fill"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-heart-3-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-fire-line"></i></a>
+            </li>
+            <li>
+              <a href="../../login/login.html"
+                ><button class="login">
+                  <i class="ri-shield-user-line"></i> | Login
+                </button></a
+              >
+            </li>
+            <li class="menu">
+              <a href="#"><i class="ri-more-2-fill"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="container">
+          <div class="poster">
+            <img
+              src="../../img/popular.jpg"
+              alt="Killers of the Flower Moon"
+            />
+            <div class="overlay">
+              <video id="trailer-video" width="300" height="200" controls>
+                <source
+                  src="./Video/Train to Busan 3_ Unveiling Peninsula (2024) .mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <div id="video-controls" class="controls" style="display: none">
+                <input
+                  type="range"
+                  id="volume-slider"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="1"
+                  onchange="adjustVolume()"
+                  title="Volume"
+                />
+                <button onclick="closeTrailer()">Close Video</button>
+              </div>
+              <button class="play-button" onclick="playTrailer()">
+                Play Trailer
+              </button>
+            </div>
+          </div>
+          <div class="details">
+            <h1>MoonOppenheimer</h1>
+            <p class="genre">Drama, Fantasy, Horror</p>
+            <p class="description">
+              Directed by Christopher Nolan, this biographical thriller follows
+              the life of J. Robert Oppenheimer, the father of the atomic bomb.
+              Praised for its acting, visuals, and intense storytelling, it's a
+              must-watch for cinephiles.
+            </p>
+            <div class="info">
+              <span class="rating">16+</span>
+              <span class="year">2018</span>
+              <span class="stars">⭐ 8.8</span>
+              <span class="duration">45-49min</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="contain-connect-movie">
+        <div class="trending-section">
+          <h2>The Movie may also you like</h2>
+          <div class="movie-carousel">
+            <div class="carousel-inner" id="carousel-inner">
+              <!-- <a href="../movie/Tredningmovie/tranding1.html"><img src="../img-movie/tranding-movie-1.jpg" alt="Movie 1" class="movie-poster" /></a> -->
+              <a href="./newmovie1.html"><img src="../../img/new 2.jpg" alt="Movie 2" class="movie-poster" /></a>
+              <a href="./newmovie2.html"><img src="../../img/new.jpg" alt="Movie 3" class="movie-poster" /></a>
+              <a href="./newmovie3.html"><img src="../../img/new3.jpg" alt="Movie 4" class="movie-poster" /></a>
+              <a href="./newmovie4.html"><img src="../../img/new4.jpg" alt="Movie 5" class="movie-poster" /></a>
+              <a href="./newmovie5.html"><img src="../../img-movie/new-1.jpg" alt="Movie 5" class="movie-poster" /></a>
+              <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
+            </div>
+          </div>
+          <div class="title">
+
+            <!-- title 1  -->
+          <div class="section">
+            <div class="title-time">
+            <a href="#">Killers of the Flower Moon</a>
+            <p>2024 .208m</p>
+            </div>
+          <button>movie</button>
+        </div>
+
+        <!-- title 2  -->
+        <div class="section">
+          <div class="title-time">
+          <a href="#">Fall Out</a>
+          <p>2024 .208m</p>
+          </div>
+        <button>movie</button>
+        </div>
+
+        <!-- title 3  -->
+        <div class="section">
+          <div class="title-time">
+          <a href="#">Fall Out</a>
+          <p>2024 .208m</p>
+          </div>
+        <button>movie</button>
+        </div>
+
+        <!-- title 4  -->
+        <div class="section">
+          <div class="title-time">
+          <a href="#">Fall Out</a>
+          <p>2024 .208m</p>
+          </div>
+        <button>movie</button>
+        </div>
+
+        <!-- title 5  -->
+        <div class="section">
+          <div class="title-time">
+          <a href="#">Fall Out</a>
+          <p>2024 .208m</p>
+          </div>
+        <button>movie</button>
+        </div>
+
+        </div>
+
+        </div>
+
+
+        <!-- movie 2 -->
+        <div class="trending-section">
+              <div class="movie-carousel">
+                <div class="carousel-inner" id="carousel-inner">
+                  <a href="./bestmovie1.html"><img src="../../img-movie/best-movie-1.webp" alt="Movie 1" class="movie-poster" /></a>
+                  <a href="./bestmovie2.html"><img src="../../img-movie/best-movie-4.jpg" alt="Movie 2" class="movie-poster" /></a>
+                  <a href="./bestmovie3.html"><img src="../../img/best3.jpg" alt="Movie 3" class="movie-poster" /></a>
+                  <a href="./bestmovie4.html"><img src="../../img/best1.jpg" alt="Movie 4" class="movie-poster" /></a>
+                  <a href="./bestmovie5.html"><img src="../../img/best2.jpg" alt="Movie 5" class="movie-poster" /></a>
+                  <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
+                </div>
+              
+              </div>
+    
+            
+              <div class="title">
+    
+                  <!-- title 1  -->
+                <div class="section">
+                  <div class="title-time">
+                  <a href="#">The Whale</a>
+                  <p>2024 .208m</p>
+                  </div>
+                <button>movie</button>
+              </div>
+    
+              <!-- title 2  -->
+              <div class="section">
+                <div class="title-time">
+                <a href="#">jonh wick4</a>
+                <p>2024 .208m</p>
+                </div>
+              <button>movie</button>
+              </div>
+    
+              <!-- title 3  -->
+              <div class="section">
+                <div class="title-time">
+                <a href="#">Wakanda Forever</a>
+                <p>2024 .208m</p>
+                </div>
+              <button>movie</button>
+              </div>
+    
+              <!-- title 4  -->
+              <div class="section">
+                <div class="title-time">
+                <a href="#">squid Game</a>
+                <p>2024 .208m</p>
+                </div>
+              <button>movie</button>
+              </div>
+    
+              <!-- title 5  -->
+              <div class="section">
+                <div class="title-time">
+                <a href="#">DUNE</a>
+                <p>2024 .208m</p>
+                </div>
+              <button>movie</button>
+              </div>
+    
+    
+    
+              </div>
+            </div>
+
+      </div>
+      <footer>
+        <h1>SVG</h1>
+        <h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsum
+          omnis modi, hic placeat adipisci <br> nisi reprehenderit ullam provident
+          quas sapiente aliquam possimus tempora reiciendis quod et neque minima
+          at?
+        </h4>
+        <div class="footer-icon">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </footer>
+    </section>
+    
+  </body>
+</html>
