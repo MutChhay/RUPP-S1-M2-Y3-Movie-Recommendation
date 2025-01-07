@@ -8,418 +8,219 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.min.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie</title>
+    <title>Recomendation Movie</title>
   </head>
   <body>
-    <section>
-      <header class="header">
-        <div class="logo">
-          <h1>SVG</h1>
-          <!-- <img src="logo.png" alt="Logo"> -->
+    <header class="header">
+      <div class="logo">
+        <a href="#"><h1>SVG</h1></a>
+        <!-- <img src="logo.png" alt="Logo"> -->
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#New">News</a></li>
+          <li><a href="#Popular">Popular</a></li>
+          <li><a href="#trending">Tranding</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <button type="submit">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+              alt="Search Icon"
+            />
+          </button>
         </div>
-        <nav class="navbar">
-          <ul>
-            <li>
-              <a href="#"><i class="ri-home-4-fill"></i></a>
-            </li>
-            <li>
-              <a href="../Create-Custom-404-error/index.html"><i class="ri-heart-3-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-fire-line"></i></a>
-            </li>
-            <li>
-              <a href="../login/login.html">
-                <button class="login"><i class="ri-shield-user-line"></i> | Login</button>
-              </a>
-            </li>
-            <li class="menu">
-              <a href="#"><i class="ri-more-2-fill"></i></a> 
-              <ul class="list-down">
-                <li><a href="../About Us/About-us.html">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">Follow Us</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main class="main">
-        <div class="search-container">
-          <h2>Find Movies, Trending movies & more</h2>
-          <div class="search-box">
-            <input type="text" placeholder="Search..." />
-            <button type="submit">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="../Create-Custom-404-error/index.html"
+              ><i class="ri-heart-3-line"></i
+            ></a>
+          </li>
+
+          <li>
+            <a href="../login/login.html"><i class="ri-user-line"></i></a>
+          </li>
+          <li class="dropdown">
+            <a href="#more">More </a>
+            <ul class="dropdown-content">
+              <li><a href="#gallery">Setting</a></li>
+              <li><a href="../help/help.html">Help</a></li>
+              <li><a href="../About Us/About-us.html">About Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-banner">
+      <div class="container-banner">
+        <div class="banner">
+          <video class="banner-video" autoplay muted loop id="video-player">
+            <source
+              src="../movie/Tredningmovie/Video/Avatar_ The Way of Water .mp4"
+              type="video/mp4"
+              id="video-source"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="banner-content">
+            <h1 class="banner-title" id="banner-title">Avatar2</h1>
+            <p class="banner-author" id="banner-author">Author: John Doe</p>
+            <p class="banner-rate" id="banner-rate">Rating: 4.3</p>
+            <a href="../movie/Tredningmovie/popularMovie4.html">
+              <button class="watch-button">Watch More</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="banner-controls">
+        <button class="prev" id="prev">Previous</button>
+        <button class="next" id="next">Next</button>
+      </div>
+    </div>
+
+    <main class="container-movie">
+      <div class="content-title">
+        <h2>Trending</h2>
+        <a href=""><p class="view-more">View More</p></a>
+      </div>
+      <!-- Trending Section -->
+      <section class="row-poster">
+        <div class="movie-carousel" id="carousel-inner">
+          <button class="scroll-btn left" id="scroll-left"><</button>
+          <!-- Movie Posters with Titles -->
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding1.html" class="movie-link">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
-                alt="Search Icon"
+                src="../img-movie/tranding-movie-1.jpg"
+                alt="Killers of the Flower Moon"
+                class="movie-poster"
               />
-            </button>
+            </a>
+            <div class="movie-title">
+              <h5 class="movie-title">Killers of the Flower Moon</h5>
+              <p class="movie-title">Time : 2h25mn <span>❤️</span>Drama</p>
+              <button>
+                <a href="../movie/Tredningmovie/tranding1.html">Watch Now</a>
+              </button>
+            </div>
           </div>
-          <div class="container">
-            <div class="banner" id="banner">
+
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding2.html">
               <img
-                src="../img/13.jpg"
-                alt="Banner Image 1"
-                class="banner-img active"
+                src="../img-movie/tranding-movie-2.webp"
+                alt="Barbie"
+                class="movie-poster"
               />
-              <img src="../img/11.jpg" alt="Banner Image 2" class="banner-img" />
-              <img src="../img/1.jpg" alt="Banner Image 3" class="banner-img" />
-            </div>
-          </div>
-        </div>
-      </main>
-      <main class="container-movie">
-        <!-- trending -->
-        <div class="trending-section">
-          <h2>Trending</h2>
-          <div class="movie-carousel">
-            <div class="carousel-inner" id="carousel-inner">
-              <a href="../movie/Tredningmovie/tranding1.html"><img src="../img-movie/tranding-movie-1.jpg" alt="Movie 1" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding2.html"><img src="../img-movie/tranding-movie-2.webp" alt="Movie 2" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding3.html"><img src="../img-movie/tranding-movie-3.jpg" alt="Movie 3" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding4.html"><img src="../img-movie/tranding-movie-4.jpg" alt="Movie 4" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding5.html"><img src="../img-movie/tredning.jpg" alt="Movie 5" class="movie-poster" /></a>
-              <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
-            </div>
-            <button class="carousel-button" id="nextButton">➔</button>
-          </div>
-          <div class="title">
-
-            <!-- title 1  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">Killers of the Flower Moon</a>
-            <p>2024 / 100-202m</p>
-            </div>
-          <button>movie</button>
-        </div>
-
-        <!-- title 2  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Barbie</a>
-          <p>2024 / 100-202m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 3  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Oppenheimer</a>
-          <p>2024 / 100-202m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 4  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">The Mavels</a>
-          <p>2024 / 100-202m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 5  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Kids vs aliens</a>
-          <p>2024 / 100-202m</p>
-          </div>
-        <button>movie</button>
-        </div>
-        </div>
-
-        </div>
-
-        <!-- Best movie -->
-        <div class="trending-section">
-          <h2>Best Movie</h2>
-          <div class="movie-carousel">
-            <div class="carousel-inner" id="carousel-inner">
-              <a href="../movie/Tredningmovie/bestmovie1.html"><img src="../img-movie/best-movie-1.webp" alt="Movie 1" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/bestmovie2.html"><img src="../img-movie/best-movie-4.jpg" alt="Movie 2" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/bestmovie3.html"><img src="../img/best3.jpg" alt="Movie 3" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/bestmovie4.html"><img src="../img/best1.jpg" alt="Movie 4" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/bestmovie5.html"><img src="../img/best2.jpg" alt="Movie 5" class="movie-poster" /></a>
-              <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
-            </div>
-            <button class="carousel-button" id="nextButton">➔</button>
+              <p class="movie-title">Barbie</p>
+            </a>
           </div>
 
-        
-          <div class="title">
-
-              <!-- title 1  -->
-            <div class="section">
-              <div class="title-time">
-              <a href="#">The Whale</a>
-              <p>2024 .208m</p>
-              </div>
-            <button>movie</button>
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding3.html">
+              <img
+                src="../img-movie/tranding-movie-3.jpg"
+                alt="Oppenheimer"
+                class="movie-poster"
+              />
+              <p class="movie-title">Oppenheimer</p>
+            </a>
           </div>
 
-          <!-- title 2  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">jonh wick4</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding4.html">
+              <img
+                src="../img-movie/tranding-movie-4.jpg"
+                alt="The Marvels"
+                class="movie-poster"
+              />
+              <p class="movie-title">The Marvels</p>
+            </a>
           </div>
 
-          <!-- title 3  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">Wakanda Forever</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding5.html">
+              <img
+                src="../img-movie/tredning.jpg"
+                alt="Kids vs Aliens"
+                class="movie-poster"
+              />
+              <p class="movie-title">Kids vs Aliens</p>
+            </a>
           </div>
 
-          <!-- title 4  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">squid Game</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding5.html">
+              <img
+                src="../img-movie/tredning.jpg"
+                alt="Kids vs Aliens"
+                class="movie-poster"
+              />
+              <p class="movie-title">Kids vs Aliens</p>
+            </a>
           </div>
 
-          <!-- title 5  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">DUNE</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding5.html">
+              <img
+                src="../img-movie/tredning.jpg"
+                alt="Kids vs Aliens"
+                class="movie-poster"
+              />
+              <p class="movie-title">Kids vs Aliens</p>
+            </a>
           </div>
 
-
-
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding5.html">
+              <img
+                src="../img-movie/tredning.jpg"
+                alt="Kids vs Aliens"
+                class="movie-poster"
+              />
+              <p class="movie-title">Kids vs Aliens</p>
+            </a>
           </div>
-        </div>
 
-        <!-- New Movie -->
-        <div class="trending-section">
-          <h2>New movie</h2>
-          <div class="movie-carousel">
-            <div class="carousel-inner" id="carousel-inner">
-              <a href="../movie/Tredningmovie/newmovie1.html"><img src="../img/new 2.jpg" alt="Movie 1" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/newmovie2.html"><img src="../img/new.jpg" alt="Movie 2" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/newmovie3.html"><img src="../img/new3.jpg" alt="Movie 3" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/newmovie4.html"><img src="../img/new4.jpg" alt="Movie 4" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/newmovie5.html"><img src="../img-movie/new-1.jpg" alt="Movie 5" class="movie-poster" /></a>
-              <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
-            </div>
-            <button class="carousel-button" id="nextButton">➔</button>
+          <div class="movie-item">
+            <a href="../movie/Tredningmovie/tranding5.html">
+              <img
+                src="../img-movie/tredning.jpg"
+                alt="Kids vs Aliens"
+                class="movie-poster"
+              />
+              <p class="movie-title">Kids vs Aliens</p>
+            </a>
           </div>
-          <div class="title">
 
-            <!-- title 1  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">Beetle juice</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
-          
+          <button class="scroll-btn right" id="scroll-right">></button>
         </div>
+      </section>
+    </main>
 
-        <!-- title 2  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Blink Twice</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 3  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Beetle juice</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 4  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Fall Out</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 5  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Dora</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-
-
-        </div>
-        </div>
-
-        <!-- cooming movie -->
-        <div class="trending-section">
-          <h2>Cooming movie</h2>
-          <div class="movie-carousel">
-            <div class="carousel-inner" id="carousel-inner">
-              <a href="../movie/Tredningmovie/comingmovie1.html"><img src="../img/coming.jpg" alt="Movie 1" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/comingmovie2.html"><img src="../img/coming2.jpg" alt="Movie 2" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/comingmovie3.html"><img src="../img/coming3.jpg" alt="Movie 3" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/comingmovie4.html"><img src="../img/13.jpg" alt="Movie 4" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/comingmovie5.html"><img src="../img/14.jpg" alt="Movie 5" class="movie-poster" /></a>
-              <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
-            </div>
-            <button class="carousel-button" id="nextButton">➔</button>
-          </div>
-          <div class="title">
-
-            <!-- title 1  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">Fall Out</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
-        </div>
-
-        <!-- title 2  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">BagMan</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 3  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">T.I.M</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 4  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Fall Out</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 5  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Avatar2</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-
-
-        </div>
-        </div>
-
-        <!-- popular movie -->
-        <div class="trending-section">
-          <h2>Popular movie</h2>
-          <div class="movie-carousel">
-            <div class="carousel-inner" id="carousel-inner">
-              <a href="../movie/Tredningmovie/popularMovie1.html"><img src="../img/popular.jpg" alt="Movie 1" class="movie-poster" /></a>
-                <a href="../movie/Tredningmovie/popularMovie2.html"><img src="../img-movie/popular3.jpg" alt="Movie 3" class="movie-poster" /></a>
-                <a href="../movie/Tredningmovie/popularMovie3.html"><img src="../img-movie/best-movie-4.jpg" alt="Movie 4" class="movie-poster" /></a>
-                <a href="../movie/Tredningmovie/popularMovie4.html"><img src="../img/14.jpg" alt="Movie 5" class="movie-poster" /></a>
-                <a href="../movie/Tredningmovie/popularMovie5.html"><img src="../img/popular2.jpg" alt="Movie 2" class="movie-poster" /></a>
-              <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
-            </div>
-            <button class="carousel-button" id="nextButton">➔</button>
-          </div>
-          <div class="title">
-
-            <!-- title 1  -->
-          <div class="section">
-            <div class="title-time">
-            <a href="#">train To Busan</a>
-            <p>2024 .208m</p>
-            </div>
-          <button>movie</button>
-        </div>
-
-        <!-- title 2  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Harry Potter</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 3  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">The Dark night</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 4  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Jonh wick4</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        <!-- title 5  -->
-        <div class="section">
-          <div class="title-time">
-          <a href="#">Avatar2</a>
-          <p>2024 .208m</p>
-          </div>
-        <button>movie</button>
-        </div>
-
-        </div>
-        </div>
-      </main>
-
-
-
-      <footer>
-        <h1>SVG</h1>
-        <h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsum
-          omnis modi, hic placeat adipisci <br> nisi reprehenderit ullam provident
-          quas sapiente aliquam possimus tempora reiciendis quod et neque minima
-          at?
-        </h4>
-        <div class="footer-icon">
-          <a href="#"><i class="ri-facebook-fill"></i></a>
-          <a href="#"><i class="ri-twitter-fill"></i></a>
-          <a href="#"><i class="ri-instagram-fill"></i></a>
-          <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-        </div>
-      </footer>
-      
-    </section>
+    <footer>
+      <h1>SVG</h1>
+      <h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsum
+        omnis modi, hic placeat adipisci <br />
+        nisi reprehenderit ullam provident quas sapiente aliquam possimus
+        tempora reiciendis quod et neque minima at?
+      </h4>
+      <div class="footer-icon">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>

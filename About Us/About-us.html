@@ -1,54 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="about-us.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about-us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.min.css">
     <title>About Us</title>
-  </head>
-  <body>
-    <section>
-      <nav class="nav">
-        <h1>About Us</h1>
-        <ul>
-          <li>
-            <a href="#"><i class="ri-home-4-fill"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-heart-3-line"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-fire-line"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-shield-user-line"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-more-2-fill"></i></a>
-          </li>
-        </ul>
-      </nav>
-
-      <main class="main-content">
-        <div class="title">
-          <p>
-            Welcome to VSC, movie recommendation website! We understand that
-            finding the perfect movie to match your mood can be a challenge.
-            That's why we’re here to help make movie discovery easy and
-            enjoyable. <br><br> Our platform is designed to offer movie suggestions based
-            on your preferences, whether you're in the mood for trending, and
-            favorite movies. <br><br> Go to destination for a great movie experience.
-            Dive in, explore, and enjoy!
-          </p>
-        </div>
-      </main>
-      <footer>
-        <p><a href="#">Email: VSC@gmail.com</a></p>
-      </footer>
-    </section>
-  </body>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>SVG</h1>
+      <!-- <img src="logo.png" alt="Logo"> -->
+    </div>
+    <nav class="navbar">
+      <ul >
+        <li><a href="../../homepage/homepage.html">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Tranding</a></li>
+      </ul>
+    </nav>
+      <nav class="navbar">
+    <ul>
+        <li>
+          <a href="#"><i class="ri-heart-3-line"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-fire-line"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-user-line"></i></a>
+        </li>
+        <li class="dropdown">
+          <a href="#more">More</a>
+          <ul class="dropdown-content">
+              <li><a href="#gallery">Setting</a></li>
+              <li><a href="#blog">Help</a></li>
+              <li><a href="#faq">About Us</a></li>
+          </ul>
+      </li>
+          <div class="search-container">
+            <div class="search-box">
+              <input type="text" placeholder="Search..." />
+              <button type="submit">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+                  alt="Search Icon"
+                />
+              </button>
+            </div>
+          </div>
+      </ul>
+    </nav>
+  </header>
+    <main>
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to SVG! We are a company dedicated to providing the best services and products to our customers. Our team is passionate about innovation and excellence.</p>
+        </section>
+        <section class="team">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="../img/1.jpg" alt="Team Member 1">
+                <h3>Vuth Vichet</h3>
+                <p>CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/1.jpg" alt="Team Member 2">
+                <h3>Pom Soksivchen</h3>
+                <p>CTO</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/1.jpg" alt="Team Member 3">
+                <h3>Mut Chhay</h3>
+                <p>COO</p>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: Mutchhay123@gmail.com</li>
+                <li>Phone: +123 456 7890</li>
+                <li>Address: 123 SVG Street, City, Country</li>
+            </ul>
+        </section>
+    </main>
+</body>
 </html>

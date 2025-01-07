@@ -17,12 +17,19 @@
       <header class="header">
         <div class="logo">
           <h1>SVG</h1>
+          <!-- <img src="logo.png" alt="Logo"> -->
         </div>
         <nav class="navbar">
-          <ul>
-            <li>
-              <a href="../../homepage/homepage.html"><i class="ri-home-4-fill"></i></a>
-            </li>
+          <ul >
+            <li><a href="../../homepage/homepage.html">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Tranding</a></li>
+          </ul>
+        </nav>
+          <nav class="navbar">
+        <ul>
             <li>
               <a href="#"><i class="ri-heart-3-line"></i></a>
             </li>
@@ -30,15 +37,27 @@
               <a href="#"><i class="ri-fire-line"></i></a>
             </li>
             <li>
-              <a href="../../login/login.html"
-                ><button class="login">
-                  <i class="ri-shield-user-line"></i> | Login
-                </button></a
-              >
+              <a href="#"><i class="ri-user-line"></i></a>
             </li>
-            <li class="menu">
-              <a href="#"><i class="ri-more-2-fill"></i></a>
-            </li>
+            <li class="dropdown">
+              <a href="#more">More</a>
+              <ul class="dropdown-content">
+                  <li><a href="#gallery">Setting</a></li>
+                  <li><a href="#blog">Help</a></li>
+                  <li><a href="#faq">About Us</a></li>
+              </ul>
+          </li>
+              <div class="search-container">
+                <div class="search-box">
+                  <input type="text" placeholder="Search..." />
+                  <button type="submit">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+                      alt="Search Icon"
+                    />
+                  </button>
+                </div>
+              </div>
           </ul>
         </nav>
       </header>
@@ -78,6 +97,7 @@
               identity, expectations, and self-discovery. It’s a colorful and
               clever film that's delighted fans worldwide.
             </p>
+            <button id="favoriteButton">❤️ Add to Favorites</button>
             <div class="info">
               <span class="rating">16+</span>
               <span class="year">2018</span>
@@ -94,10 +114,10 @@
           <div class="movie-carousel">
             <div class="carousel-inner" id="carousel-inner">
               <!-- <a href="../movie/Tredningmovie/tranding1.html"><img src="../img-movie/tranding-movie-1.jpg" alt="Movie 1" class="movie-poster" /></a> -->
-              <a href="../movie/Tredningmovie/tranding2.html"><img src="../../img-movie/tranding-movie-2.webp" alt="Movie 2" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding3.html"><img src="../../img-movie/tranding-movie-3.jpg" alt="Movie 3" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding4.html"><img src="../../img-movie/tranding-movie-4.jpg" alt="Movie 4" class="movie-poster" /></a>
-              <a href="../movie/Tredningmovie/tranding5.html"><img src="../../img-movie/tredning.jpg" alt="Movie 5" class="movie-poster" /></a>
+              <a href="./tranding2.html"><img src="../../img-movie/tranding-movie-2.webp" alt="Movie 2" class="movie-poster" /></a>
+              <a href="./tranding3.html"><img src="../../img-movie/tranding-movie-3.jpg" alt="Movie 3" class="movie-poster" /></a>
+              <a href="./tranding4.html"><img src="../../img-movie/tranding-movie-4.jpg" alt="Movie 4" class="movie-poster" /></a>
+              <a href="./bestmovie5.html"><img src="../../img/best2.jpg" alt="Movie 5" class="movie-poster" /></a>
               <a href="./tranding5.html"><img src="../../img-movie/joker2.jpg" alt="Movie 5" class="movie-poster" /></a>
               <!-- <img src="./img/1.jpg" alt="Movie 6" class="movie-poster"> -->
             </div>

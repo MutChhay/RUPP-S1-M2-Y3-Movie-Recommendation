@@ -1,61 +1,105 @@
-const images = document.querySelectorAll('.banner-img');
-let currentIndex = 0;
-const totalImages = images.length;
+// Video data array
+const videos = [
+  {
+    title: "Jonh Wick4",
+    author: "Keanu Reeves",
+    rating: "7.4",
+    src: "../movie/Tredningmovie/Video/John Wick_ Chapter 4 (2023) Final Trailer – Keanu Reeves, Donnie Yen, Bill Skarsgård.mp4",
+    link: "../movie/Tredningmovie/popularMovie6.html"
+  },
+  {
+    title: "Killers of the Flower Moon",
+    author: "Keanu Reeves",
+    rating: "7.4",
+    src: "../movie/Tredningmovie/Video/Killers of the Flower Moon — Official Trailer .mp4",
+    link: "../movie/Tredningmovie/tranding1.html"
+  },
+  {
+      title: "Avatar2",
+      author: "John Doe",
+      rating: "4.3",
+      src: "../movie/Tredningmovie/Video/Avatar_ The Way of Water .mp4",
+      link: "../movie/Tredningmovie/popularMovie4.html"
+  },
+  {
+      title: "Barbie",
+      author: "Margot Robbie",
+      rating: "4.5",
+      src: "../movie/Tredningmovie/Video/Barbie .mp4",
+      link: "../movie/Tredningmovie/tranding2.html"
+  },
+  
+];
 
-function showNextImage() {
-    // Remove the 'active' class from the current image
-    images[currentIndex].classList.remove('active');
+let currentVideoIndex = 0;
 
-    // Calculate the next image index
-    currentIndex = (currentIndex + 1) % totalImages;
+// DOM elements
+const videoPlayer = document.getElementById("video-player");
+const videoSource = document.getElementById("video-source");
+const bannerTitle = document.getElementById("banner-title");
+const bannerAuthor = document.getElementById("banner-author");
+const bannerRate = document.getElementById("banner-rate");
+const watchButton = document.querySelector(".watch-button");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
 
-    // Add the 'active' class to the next image
-    images[currentIndex].classList.add('active');
+// Function to load a video
+function loadVideo(index) {
+    const video = videos[index];
+    videoSource.src = video.src;
+    videoPlayer.load(); // Reload the video
+    bannerTitle.textContent = video.title;
+    bannerAuthor.textContent = `Author: ${video.author}`;
+    bannerRate.textContent = `Rating: ${video.rating}`;
+    watchButton.setAttribute("href", video.link); // Dynamically update the link
 }
 
-// Change image every 3 seconds
-setInterval(showNextImage, 3000);
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const menu = document.querySelector(".menu");
-    const dropdown = document.querySelector(".list-down");
-
-    menu.addEventListener("click", function(event) {
-        dropdown.classList.toggle("show"); // Toggle the .show class
-    });
-
-    // Optional: Close the dropdown when clicking outside
-    document.addEventListener("click", function(event) {
-        if (!menu.contains(event.target)) {
-            dropdown.classList.remove("show");
-        }
-    });
-});
-// Select the image and favorite button
-const imageElement = document.getElementById('homepageImage');
-const favoriteButton = document.getElementById('favoriteButton');
-
-// Add event listener to favorite button
-favoriteButton.addEventListener('click', () => {
-  // Store the image URL in localStorage
-  const imageUrl = imageElement.src;
-  localStorage.setItem('favoriteImage', imageUrl);
-
-  alert('Image added to favorites!');
+// Event listeners
+prevButton.addEventListener("click", () => {
+    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length; // Loop backward
+    loadVideo(currentVideoIndex);
 });
 
-// trending movie
-const favoriteImageUrl = localStorage.getItem('favoriteImage');
+nextButton.addEventListener("click", () => {
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length; // Loop forward
+    loadVideo(currentVideoIndex);
+});
 
-// If there's a favorite image URL, display it
-if (favoriteImageUrl) {
-  const img = document.createElement('img');
-  img.src = favoriteImageUrl;
-  img.alt = 'Favorite Image';
-  document.getElementById('favoriteImageContainer').appendChild(img);
-} else {
-  // Optional: Display a message if no image is favorited
-  document.getElementById('favoriteImageContainer').innerText = 'No favorite image selected';
-}
+// Initial load
+loadVideo(currentVideoIndex);
 
+const carouselInner = document.getElementById("carousel-inner");
+const next = document.getElementById("nextButton");
+
+let scrollPosition = 0;
+
+nextButton.addEventListener("click", () => {
+    const cardWidth = document.querySelector(".movie-poster").offsetWidth;
+    const carouselWidth = carouselInner.scrollWidth;
+    const visibleWidth = carouselInner.parentElement.offsetWidth;
+
+    if (scrollPosition + visibleWidth < carouselWidth) {
+        scrollPosition += cardWidth + 20; // Include margin
+        carouselInner.style.transform = `translateX(-${scrollPosition}px)`;
+    } else {
+        // Loop back to the start
+        scrollPosition = 0;
+        carouselInner.style.transform = "translateX(0)";
+    }
+});
+// Get elements
+const carousel = document.getElementById("carousel-inner");
+const scrollLeftBtn = document.getElementById("scroll-left");
+const scrollRightBtn = document.getElementById("scroll-right");
+
+// Scroll left
+scrollLeftBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  carousel.scrollBy({ left: -300, behavior: "smooth" }); // Adjust scroll amount as needed
+});
+
+// Scroll right
+scrollRightBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  carousel.scrollBy({ left: 300, behavior: "smooth" }); // Adjust scroll amount as needed
+});

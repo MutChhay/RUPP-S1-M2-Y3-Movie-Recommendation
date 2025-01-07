@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.min.css">
+    <title>Help</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <h1>SVG</h1>
+          <!-- <img src="logo.png" alt="Logo"> -->
+        </div>
+        <nav class="navbar">
+          <ul >
+            <li><a href="../../homepage/homepage.html">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Tranding</a></li>
+          </ul>
+        </nav>
+          <nav class="navbar">
+        <ul>
+            <li>
+              <a href="#"><i class="ri-heart-3-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-fire-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-user-line"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#more">More</a>
+              <ul class="dropdown-content">
+                  <li><a href="#gallery">Setting</a></li>
+                  <li><a href="#blog">Help</a></li>
+                  <li><a href="#faq">About Us</a></li>
+              </ul>
+          </li>
+              <div class="search-container">
+                <div class="search-box">
+                  <input type="text" placeholder="Search..." />
+                  <button type="submit">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+                      alt="Search Icon"
+                    />
+                  </button>
+                </div>
+              </div>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <section class="help-section">
+            <h2>Help Center</h2>
+            <p>If you are experiencing any issues, please check the common problems below or contact us using the form.</p>
+        </section>
+        <section class="common-issues">
+            <h2>Common Issues</h2>
+            <ul>
+                <li><strong>Issue 1:</strong> Unable to login</li>
+                <p>Solution: Ensure your username and password are correct. If you forgot your password, use the "Forgot Password" link to reset it.</p>
+                <li><strong>Issue 2:</strong> Page not loading</li>
+                <p>Solution: Check your internet connection and try refreshing the page. If the problem persists, clear your browser cache.</p>
+                <li><strong>Issue 3:</strong> Video playback issues</li>
+                <p>Solution: Ensure you have the latest version of your browser and that your internet connection is stable.</p>
+            </ul>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_help_request.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="issue">Describe your issue:</label>
+                <textarea id="issue" name="issue" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
