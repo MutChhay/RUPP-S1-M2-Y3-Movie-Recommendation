@@ -103,4 +103,27 @@ scrollRight.addEventListener("click", (e) => {
   e.preventDefault();
   carousel.scrollBy({ left: 300, behavior: "smooth" }); // Adjust scroll amount as needed
 });
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text)
+      .then(() => alert("Link copied to clipboard!"))
+      .catch(err => alert("Failed to copy the link."));
+}
 
+function shareTo(platform) {
+  const shareLink = "https://example.com/movie-page";
+  let url = "";
+
+  switch (platform) {
+      case 'facebook':
+          url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareLink)}`;
+          break;
+      case 'tiktok':
+          alert('TikTok sharing functionality needs an API integration.');
+          return;
+      default:
+          alert('Unsupported platform!');
+          return;
+  }
+
+  window.open(url, '_blank');
+}

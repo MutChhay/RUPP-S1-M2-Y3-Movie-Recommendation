@@ -40,3 +40,34 @@ favoriteButton.addEventListener('click', () => {
 
   alert('Image added to favorites!');
 });
+
+function addToFavorites(movieTitle) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.includes(movieTitle)) {
+        favorites.push(movieTitle);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        alert(`${movieTitle} has been added to your favorites!`);
+    } else {
+        alert(`${movieTitle} is already in your favorites!`);
+    }
+}
+
+function loadFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoritesContainer = document.getElementById('favorites-container');
+    favoritesContainer.innerHTML = '';
+
+    if (favorites.length === 0) {
+        favoritesContainer.innerHTML = '<p>You have no favorite movies yet!</p>';
+        return;
+    }
+
+    favorites.forEach(movie => {
+        const movieElement = document.createElement('div');
+        movieElement.className = 'favorite-movie';
+        movieElement.innerHTML = `<h3>${movie}</h3>`;
+        favoritesContainer.appendChild(movieElement);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadFavorites);
