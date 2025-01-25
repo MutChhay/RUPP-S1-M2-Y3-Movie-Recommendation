@@ -88,18 +88,19 @@ nextButton.addEventListener("click", () => {
     }
 });
 // Get elements
-const carousel = document.getElementById("carousel-inner");
-const scrollLeftBtn = document.getElementById("scroll-left");
-const scrollRightBtn = document.getElementById("scroll-right");
+const scrollLeft = document.getElementById('scroll-left');
+const scrollRight = document.getElementById('scroll-right');
+const carousel = document.querySelector('.Card-Movie');
 
 // Scroll left
-scrollLeftBtn.addEventListener("click", (e) => {
+scrollLeft.addEventListener("click", (e) => {
   e.preventDefault();
   carousel.scrollBy({ left: -300, behavior: "smooth" }); // Adjust scroll amount as needed
 });
 
 // Scroll right
-scrollRightBtn.addEventListener("click", (e) => {
+scrollRight.addEventListener("click", (e) => {
   e.preventDefault();
   carousel.scrollBy({ left: 300, behavior: "smooth" }); // Adjust scroll amount as needed
 });
+
